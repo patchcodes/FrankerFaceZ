@@ -15,7 +15,7 @@
 
 	const DEBUG = localStorage.ffzDebugMode == 'true' && document.body.classList.contains('ffz-dev'),
 		HOST = location.hostname,
-		SERVER = DEBUG ? '//localhost:8000/script' : 'https://frankerfacez.pages.dev',
+		SERVER = DEBUG ? '//localhost:8000/script' : '//frankerfacez.pages.dev',
 		script = document.createElement('script');
 
 	let FLAVOR =
