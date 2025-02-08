@@ -9,9 +9,9 @@ export const DEBUG = localStorage.ffzDebugMode === 'true' && document.body.class
 export const EXTENSION = !!__extension__;
 
 /** The base URL of the FrankerFaceZ CDN. */
-export const SERVER = DEBUG ? 'https://localhost:8000' : 'https://cdn2.frankerfacez.com';
+export const SERVER = DEBUG ? 'https://localhost:8000/script' : 'https://frankerfacez.pages.dev';
 
-let path = `${SERVER}/script`;
+let path = `${SERVER}`;
 
 if ( EXTENSION ) {
 	path = __webpack_public_path__;

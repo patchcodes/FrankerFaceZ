@@ -15,7 +15,7 @@
 
 	const DEBUG = localStorage.ffzDebugMode == 'true' && document.body.classList.contains('ffz-dev'),
 		HOST = location.hostname,
-		SERVER = DEBUG ? '//localhost:8000' : '//cdn2.frankerfacez.com',
+		SERVER = DEBUG ? '//localhost:8000/script' : 'https://frankerfacez.pages.dev/',
 		script = document.createElement('script');
 
 	let FLAVOR =
@@ -29,6 +29,6 @@
 	script.id = 'ffz-script';
 	script.async = true;
 	script.crossOrigin = 'anonymous';
-	script.src = `${SERVER}/script/${FLAVOR}.js?_=${Date.now()}`;
+	script.src = `${SERVER}/${FLAVOR}.js?_=${Date.now()}`;
 	document.head.appendChild(script);
 })();
